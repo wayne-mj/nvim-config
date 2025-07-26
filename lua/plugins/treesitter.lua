@@ -14,8 +14,13 @@ return {
             indent = {
                 enable = true,
             },
+            -- context_commentstring = {
+            --     enable = true,
+            --     enable_autocmd = false, -- We're using a manual hook in mini.comment
+            -- },
             ensure_installed = {
                 "vim", "vimdoc", "lua", "luadoc", "bash", "c", "query", "markdown", "markdown_inline",
+                "typescript", "tsx", "html", "javascript"
             },
             incremental_selection = {
                 enable = true,

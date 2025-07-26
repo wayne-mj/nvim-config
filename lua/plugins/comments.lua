@@ -25,6 +25,16 @@ return {
             end
         })
 
+        vim.api.nvim_create_autocmd("FileType", {
+            pattern = {
+                "cobol",
+                "cob", "cbl"
+            },
+            callback = function()
+                vim.bo.commentstring = "* > %s < "
+            end
+        })
+
         -- Setup mini.comment with default mappings
         require("mini.comment").setup({
             -- Optional: you can change mappings or other options here
